@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 , viewport-fit=cover" />
+  <title>Street Bukka | Home</title>
+  <!-- Expect navigation changes for each re routing per click and navigation -->
+  <meta name="theme-color" content="#ff1313e8" />
+  <meta name="description"
+    content="Street Bukka Kitchen— Fresh foods in every style. Abuja's No one fresh affordable foods plug." />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Street Bukka" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="bukkastreetkubwawebappicon.jpg" />
+  <link rel="apple-touch-icon" href="bukkastreetkubwawebappicon.jpg" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo" data-page="home">
+        <div class="logo-mark">
+          <svg width="36" height="36" viewBox="0 0 40 40" fill="none">
+            <path d="M20 4C14 10 10 16 10 22c0 6 4 10 10 10s10-4 10-10c0-6-4-12-10-18z" fill="#22c55e" />
+            <path d="M20 8c-2 3-4 6-4 9 0 3 1.5 5 4 5s4-2 4-5c0-3-2-6-4-9z" fill="#16a34a" />
+            <path d="M18 28c1 2 3 3 5 2" stroke="#f97316" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-fresh">Street</span><span class="logo-bites" style="font-size: .8rem;"></span>
+          <span class="logo-kitchen" style="font-size: 1.2rem; font-weight:900">Bukka</span>
+        </div>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#" class="nav-link active" data-page="home">Home</a>
+        <a href="#" class="nav-link" data-page="menu">Menu</a>
+        <a href="#" class="nav-link" data-page="about">About</a>
+        <a href="#" class="nav-link" data-page="contact">Contact</a>
+      </nav>
+      <button class="btn-order-now" data-page="menu">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <path d="M16 10a4 4 0 01-8 0" />
+        </svg>
+        Order Now
+      </button>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- main app -->
+  <main id="app"></main>
+
+  <!-- cart , hidden by default -->
+  <button class="floating-cart" id="floatingCart" aria-label="Cart">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+      <circle cx="9" cy="21" r="1" />
+      <circle cx="20" cy="21" r="1" />
+      <path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6" />
+    </svg>
+    <span class="cart-badge" id="cartBadge" style="display:none">0</span>
+  </button>
+
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button class="cart-close" id="cartClose">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <p class="cart-empty">Your cart is empty</p>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <strong id="cartTotal">₦0</strong>
+      </div>
+      <button class="btn-clear-cart" id="clearCartBtn">Clear Cart</button>
+      <button class="btn-checkout" id="checkoutBtn">Order via WhatsApp</button>
+    </div>
+  </aside>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="logo">
+          <div class="logo-mark">
+            <svg width="32" height="32" viewBox="0 0 40 40" fill="none">
+              <path d="M20 4C14 10 10 16 10 22c0 6 4 10 10 10s10-4 10-10c0-6-4-12-10-18z" fill="#22c55e" />
+              <path d="M20 8c-2 3-4 6-4 9 0 3 1.5 5 4 5s4-2 4-5c0-3-2-6-4-9z" fill="#16a34a" />
+            </svg>
+          </div>
+          <div class="logo-text">
+            <span class="logo-fresh">Street</span><span class="logo-bites"></span>
+            <span class="logo-kitchen">Buka</span>
+          </div>
+        </div>
+        <p>Eat smart, Live fresh. Serving the best of Nigerian dishes with love and freshness.</p>
+      </div>
+      <div class="footer-col">
+        <h4>QUICK LINKS</h4>
+        <a href="#" data-page="home">Home</a>
+        <a href="#" data-page="menu">Menu</a>
+        <a href="#" data-page="about">About</a>
+        <a href="#" data-page="contact">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>CONTACT US</h4>
+        <p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-geo-alt-fill"
+            viewBox="0 0 16 16">
+            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
+          </svg>Kubwa, Abuja, Nigeria
+        </p>
+        <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-telephone-fill" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+          </svg>07078338766</p>
+        <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-envelope-at-fill" viewBox="0 0 16 16">
+            <path
+              d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2zm-2 9.8V4.698l5.803 3.546zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.5 4.5 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586zM16 9.671V4.697l-5.803 3.546.338.208A4.5 4.5 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671" />
+            <path
+              d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791" />
+          </svg> hello@StreetBuka.ng</p>
+      </div>
+      <div class="footer-col">
+        <h4>OPENING HOURS</h4>
+        <p>Mon – Fri: 7am – 10pm</p>
+        <p>Saturday: 8am – 11pm</p>
+        <p>Sunday:Closed</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Street Bukka. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("./sw.js").catch(() => { });
+      });
+    }
+  </script>
+</body>
+
+</html>

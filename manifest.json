@@ -1,0 +1,18 @@
+{
+  "name": "Street Bukka Kitchen",
+  "short_name": "Street Bukka ng",
+  "description": "Fresh foods you crave — Freshness backed with sweetness",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ff1313e8",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "bukkastreetkubwawebappicon.jpg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
