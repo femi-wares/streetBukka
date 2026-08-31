@@ -1,5 +1,13 @@
-const CACHE = "StreetBukka-v1";
-const ASSETS = ["./index.html", "./styles.css", "./app.js", "./manifest.json", "./bukkastreetkubwawebappicon.jpg"];
+const CACHE = "Street-Bukka-v1";
+const ASSETS = [
+  "./index.html",
+  "./styles.css",
+  "./app.js",
+  "./manifest.json",
+  "./images/icon-180.png",
+  "./images/icon-192.png",
+  "./images/icon-512.png"
+];
 
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(ASSETS)).then(() => self.skipWaiting()));
