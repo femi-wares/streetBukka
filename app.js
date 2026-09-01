@@ -185,6 +185,22 @@ function saveCart() {
   updateCartUI();
 }
 
+function flashCartButton(button) {
+  if (!button || button.dataset.feedbackLock === "true") return;
+
+  const originalHtml = button.dataset.defaultHtml || button.innerHTML;
+  button.dataset.defaultHtml = originalHtml;
+  button.dataset.feedbackLock = "true";
+  button.disabled = true;
+  button.innerHTML = "Added to cart";
+
+  setTimeout(() => {
+    button.innerHTML = originalHtml;
+    button.disabled = false;
+    delete button.dataset.feedbackLock;
+  }, 1200);
+}
+
 function updateCartUI() {
   const badge = document.getElementById("cartBadge");
   const container = document.getElementById("cartItems");
@@ -814,6 +830,14 @@ function bindMenuEvents() {
 // compile all init 
 document.addEventListener("DOMContentLoaded", () => {
   document.body.addEventListener("click", (e) => {
+    const button = e.target.closest("button");
+    if (button) {
+      const onclick = button.getAttribute("onclick") || "";
+      if (onclick.includes("addToCart")) {
+        flashCartButton(button);
+      }
+    }
+
     const t = e.target.closest("[data-page]");
     if (t) {
       e.preventDefault();
